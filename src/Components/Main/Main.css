@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  p {
+    font-family: "Lora", serif;
+  }
+  
+  /* banner */
+  /* responsive design -- no banner for mobile */
+  
+  .banner {
+    text-align: center;
+    width: 100%;
+    background-color: #7aad8e;
+    color: white;
+    letter-spacing: 3px;
+    justify-content: space-between;
+    padding: 5px;
+  }
+  
+  /* header */
+  /* play around with position: fixed for header and footer */
+  
+  .checkout_icon {
+    height: 30px;
+    float: right;
+    padding: 5px;
+  }
+  
+  /* not centered? I think it's a problem with the image itself not the css */
+  .logo {
+    height: 220px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* change font */
+  .description {
+    font-family: "Birthstone Bounce", cursive;
+    font-size: 175%;
+    color: #a57454;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  
+  /* footer */
+  /* responsive design -- instead of three columns do one */
+  
+  .footer {
+    background-color: #fcf3eb;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .footer_title {
+    font-family: "Alata", sans-serif;
+    color: #f6e7de;
+    letter-spacing: 10px;
+    font-size: 150%;
+  }
+  
+  /* about */
+  
+  #Louise {
+    height: 250px;
+  }
+  
+  .bio {
+    color: #a57454;
+  }
+  
+  /* contact form */
+  
+  .contact {
+    font-family: "Lora", serif;
+    color: #e4b998;
+  }
+  
+  textarea,
+  input[type] {
+    font-family: "Lora", serif;
+    border: none;
+    padding: 5px;
+    width: 125%;
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type="submit"] {
+    color: white;
+    background-color: #e4b998;
+    padding: 5px;
+    border-radius: 3px;
+    width: 30%;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type="submit"]:hover {
+    background-color: #c17f32;
+  }
+  
+  input[type="submit"]:hover {
+    cursor: pointer;
+  }
+  
+  /* socials */
+  
+  .icon {
+    height: 40px;
+  }
+.login {
+  margin-left: 10px;
+}

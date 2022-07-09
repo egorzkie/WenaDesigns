@@ -1,0 +1,13 @@
+body {
+  /* image for the background */
+  background-image: url("./Images/green.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.search-input {
+  margin-right: 15px;
+  border-radius: 5px;
+  padding: 3px;
+  width: 150px;
+}
