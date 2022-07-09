@@ -1,7 +1,8 @@
 import { Link, useNavigate } from 'react-router-dom';
+import './TopRight.css';
 import Parse from "parse";
 import shoppingcart from './Images/shopping.png'
-import {doUserLogOut} from '../Auth/AuthService';
+import profile from './Images/profile.png'
 
 function TopRight() {
   const navigate = useNavigate();
@@ -10,27 +11,40 @@ function TopRight() {
   // check if user is already login or not
   // if is show log out
   if (currentUser !== null) {
-    var check = <button onClick={() => doUserLogOut({navigate})}>Log out</button>
+    // var check = <button onClick={() => doUserLogOut({navigate})} className="auth"
+    // >Log Out
+    // </button>
+    var check = <Link to="/profile" className="profile">
+      <img
+            src={profile}
+            alt="Checkout"
+            className="checkout_icon"
+      />
+    </Link>;
       // do stuff with the user
   } else {
       // if not show log in
-    check = <Link to="/login">
-    Login
+    check = <Link to="/login" className="profile">
+      <img
+            src={profile}
+            alt="Checkout"
+            className="checkout_icon"
+      />
     </Link>;
   } 
 
   return (
       <div>
-        {/* Moved register to log in  */}
-        
-      {check}
-      <a href="checkout/index.html">
+      {/* Moved register to log in/profile  */}
+      {/* Need to change href */}
+      <Link to="/cart">
           <img
             src={shoppingcart}
             alt="Checkout"
             className="checkout_icon"
           />
-        </a>
+        </Link>
+      {check}
       </div>
 
   );

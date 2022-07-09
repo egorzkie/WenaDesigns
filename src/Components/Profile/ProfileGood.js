@@ -1,35 +1,31 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Parse from "parse";
 import Header from '../Header/Header.js'
+import {doUserLogOut} from '../Auth/AuthService';
 
 function ProfileGood() {
-    const [cart, setCart] = useState('empty')
-    const { firstname, lastname } = useParams();
-    useEffect(() => {
-        getCurrentUser().then((user) => {
-            // const user = data.find(d => d.name === 'OwnUbrM8nc')
-            const productName = user.get('cart')
-            setCart(productName)
-        })
-    })
+  
+    // moved cart stuff
+
+    const navigate = useNavigate();
+    var currentUser = Parse.User.current();
+
+    if (currentUser !== null) {
+        var check = <button onClick={() => doUserLogOut({navigate})}>
+            Log Out
+        </button>
+    }
     // Temporary
     // Add more functionality such as change username, password, etc. 
     return (
         <div>
             <Header />
         <p>Edit your profile...{" "}</p>
-        {cart}
+        {/* Move cart to shopping cart page */}
+        {check}
     </div>
     );
 }
 
-
-const getCurrentUser = async() => {
-    const currentUser = await Parse.User.current();
-    const userid = currentUser.id
-    // const userid = 'OwnUbrM8nc'
-    const results = await (new Parse.Query('User').findAll());
-    return results.find(res => res.id === userid)
-}
 export default ProfileGood;

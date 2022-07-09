@@ -12,7 +12,6 @@ function Nav() {
         <Link className="[  ] [ pl-4 pr-4 ]" to="/home">Home</Link>
         <Link className="[  ] [ pl-4 pr-4 ]" to="/ShopAll">Shop All</Link>
         <Link className="[  ] [ pl-4 pr-4 ]" to="/More">More</Link>
-        <Link className="[  ] [ pl-4 pr-4 ]" to="/Profile">Profile</Link>
 
       </ul>
       
