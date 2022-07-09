@@ -8,12 +8,11 @@ import AuthRegister from './Auth/AuthRegister';
 import AuthLogin from "./Login/AuthLogin";
 import More from './More/More';
 import Profile from './Profile/ProfileHome';
-
+import Header from './Header/Header';
 
 function Components() {
   return (
     <BrowserRouter>
-      <Nav />
       <Routes>
         <Route path="/home" element={<MainModule />} />
         <Route path="/ShopAll" element={<ShopAll />} />

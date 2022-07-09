@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from "react-router-dom";
 import Parse from "parse";
+import Header from '../Header/Header.js'
 
 function ProfileGood() {
     const [cart, setCart] = useState('empty')
@@ -14,10 +15,13 @@ function ProfileGood() {
     })
     // Temporary
     // Add more functionality such as change username, password, etc. 
-    return <div>
+    return (
+        <div>
+            <Header />
         <p>Edit your profile...{" "}</p>
         {cart}
     </div>
+    );
 }
 
 

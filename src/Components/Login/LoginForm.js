@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function LoginForm({ user, onChange, onSubmit }) {
   return (
@@ -38,6 +39,10 @@ function LoginForm({ user, onChange, onSubmit }) {
           </button>
         </div>
       </form>
+      <p>Don't have an account?</p>
+      <Link to="/AuthRegister">
+          Register
+      </Link>
     </div>
   );
 }

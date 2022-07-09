@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Parse from "parse";
+import Header from '../Header/Header.js'
 
 function More() {
     const [cart, setCart] = useState('empty')
@@ -10,7 +11,7 @@ function More() {
             setCart(productName)
         })
     })
-    return <div>{cart}</div>
+    return <div><Header />{cart}</div>
 }
 const getCurrentUser = async() => {
     const currentUser = await Parse.User.current();

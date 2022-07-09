@@ -1,0 +1,46 @@
+  /* play around with fixed positioning */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-family: "Lora", serif;
+}
+  
+  /* banner */
+  /* responsive design -- no banner for mobile */
+  
+.banner {
+    text-align: center;
+    width: 100%;
+    background-color: #7aad8e;
+    color: white;
+    letter-spacing: 3px;
+    justify-content: space-between;
+    padding: 5px;
+  }
+  
+.checkout_icon {
+    height: 30px;
+    float: right;
+    padding: 5px;
+  }
+
+    /* not centered? I think it's a problem with the image itself not the css */
+    .logo {
+      height: 220px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    /* change font */
+    .description {
+      font-family: "Birthstone Bounce", cursive;
+      font-size: 175%;
+      color: #a57454;
+      text-align: center;
+      padding: 10px;
+    }

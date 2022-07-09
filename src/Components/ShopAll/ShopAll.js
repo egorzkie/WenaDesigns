@@ -4,6 +4,7 @@ import {
 } from 'react';
 
 import Parse from 'parse';
+import Header from '../Header/Header.js'
 
 // In a React Native application
 import ItemCard from '../ItemCard/ItemCard';
@@ -39,10 +40,9 @@ function ShopAll() {
   }, []);
 
   return (
-    <div className=" items_list [ flex flex-wrap ]
-     [ w-100 gap-5 shadow-md p-5 ]"
+    <div className="items_list"
     >
-
+      <Header />
       { items.map(({ name, price, id }) => (
         <ItemCard
           key={id}

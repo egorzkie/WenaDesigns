@@ -5,6 +5,7 @@ import LoginForm from "./LoginForm";
 // 参考： https://stackoverflow.com/questions/62861269/attempted-import-error-usehistory-is-not-exported-from-react-router-dom
 import { useNavigate } from 'react-router-dom';
 import ProtectedRoute from '../../Common/AppTools/ProtectedRoute';
+import Header from '../Header/Header.js'
 
 function AuthLogin() {
   const [newUser, setNewUser] = useState({
@@ -56,6 +57,7 @@ function AuthLogin() {
 
   return (
     <div>
+      <Header />
       <ProtectedRoute component={() => <LoginForm
         user={newUser}
         onChange={onChangeHandler}
