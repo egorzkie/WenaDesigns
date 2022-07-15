@@ -1,16 +1,43 @@
 import './Main.css';
+import { Link } from 'react-router-dom';
 import Header from '../Header/Header.js'
-import { Divider } from 'antd';
+import Footer from '../Footer/Footer.js'
+import sign1 from './Images/sign1.jpg'
+import sign2 from './Images/sign2.jpg'
+import sign3 from './Images/sign3.jpg'
 
 /* MAIN MODULE WITH STATEFUL PARENT AND STATELESS CHILD */
 function MainModule() {
   return (
     <div>
         <Header />
-        {/* <div>
+        <br/><br/>
+        <div>
+        <Link to="/ShopAll">
         <button className="shopButton">SHOP</button>
-        </div> */}
-        <h2>Featured items...</h2>
+        </Link>
+        </div>
+        <br/><br/><br/><br/>
+        <div className="featured">  
+        <h2 className="text">CUSTOM BABY NURSERY SIGNS</h2>
+        {/* TO DO: add links to dynamic web page */}
+        <img
+            src={sign1}
+            alt="'Lavinia' Baby Nursery Sign"
+            className="sign"
+        />
+        <img
+              src={sign2}
+              alt="'Julianna' Baby Nursery Sign''"
+              className="sign"
+        />
+        <img
+              src={sign3}
+              alt="'Lilah' Baby Nursery Sign"
+              className="sign"
+        />
+        </div>
+        <Footer />
     </div>
   );
 }

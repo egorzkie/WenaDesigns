@@ -3,9 +3,11 @@ import React from "react";
 const AuthForm = ({ user, onChange, onSubmit }) => {
   return (
     <div>
+      <div className="form-canvas">
+      <h3 className="login-title">REGISTER</h3>
       <form onSubmit={onSubmit} autoComplete="off">
         <div className="form-group">
-          <label>First Name</label>
+          <label>first name</label>
           <br />
           <input
             type="text"
@@ -14,12 +16,12 @@ const AuthForm = ({ user, onChange, onSubmit }) => {
             value={user.firstName}
             onChange={onChange}
             name="firstName"
-            placeholder="first name"
+            placeholder="FIRST NAME"
             required
           />
         </div>
         <div className="form-group">
-          <label>Last Name</label>
+          <label>last name</label>
           <br />
           <input
             type="text"
@@ -28,11 +30,12 @@ const AuthForm = ({ user, onChange, onSubmit }) => {
             value={user.lastName}
             onChange={onChange}
             name="lastName"
+            placeholder="LAST NAME"
             required
           />
         </div>{" "}
         <div className="form-group">
-          <label>Email</label>
+          <label>email</label>
           <br />
           <input
             type="email"
@@ -41,11 +44,12 @@ const AuthForm = ({ user, onChange, onSubmit }) => {
             value={user.email}
             onChange={onChange}
             name="email"
+            placeholder="EMAIL"
             required
           />
         </div>{" "}
         <div className="form-group">
-          <label>Password</label>
+          <label>password</label>
           <br />
           <input
             type="password"
@@ -55,15 +59,17 @@ const AuthForm = ({ user, onChange, onSubmit }) => {
             onChange={onChange}
             name="password"
             min="0"
+            placeholder="PASSWORD"
             required
           />
         </div>
         <div className="form-group">
           <button type="submit" className="btn btn-primary" onSubmit={onSubmit}>
-            Submit
+            SUBMIT
           </button>
         </div>
       </form>
+      </div>
     </div>
   );
 };

@@ -5,6 +5,7 @@ import {
 
 import Parse from 'parse';
 import Header from '../Header/Header.js'
+import Footer from '../Footer/Footer.js'
 
 // In a React Native application
 import ItemCard from '../ItemCard/ItemCard';
@@ -49,6 +50,8 @@ function ShopAll() {
           {...{ name, price, id }}
         />
       )) }
+      <div className="footer-gap"></div>
+      <Footer />
     </div>
   );
 }

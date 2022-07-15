@@ -1,0 +1,75 @@
+.form-canvas {
+    background-color: white;
+    margin-top: 20px;
+    margin-left: 450px;
+    margin-right: 450px;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+    padding: 50px;
+}
+
+.login-title {
+    font-family: "Alata", sans-serif;
+    letter-spacing: 1px;
+    color: #a57454;
+    letter-spacing: 2px;
+}
+
+.form-group {
+    font-family: "Lora", serif;
+    color: #e4b998;
+    margin-top: 10px;
+}
+
+.form-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    margin-top: 10px;
+}
+
+.form-control {
+    font-family: "Lora", serif;
+    border: none;
+    padding: 5px;
+    width: 98%;
+    background-color: #f0ede7;
+}
+
+/* Style button */
+button[type="submit"] {
+    color: white;
+    background-color: #e4b998;
+    padding: 5px;
+    border-radius: 3px;
+    width: 100%;
+    border: none;
+    font-family: "Lora", serif;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+button[type="submit"]:hover {
+    cursor: pointer;
+    background-color: #c17f32;
+  }
+
+.register-message {
+    text-align: center;
+    color: #a57454;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-size: 95%;
+}
+
+.register-button {
+    color: white;
+}
+
+.register-button:hover {
+    text-decoration: none;
+}
+
+.footer-gap{
+    height: 50px;
+}

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { createUser } from "./AuthService";
 import AuthForm from "./AuthForm";
 import Header from '../Header/Header.js'
+import Footer from '../Footer/Footer.js'
 
 const AuthRegister = () => {
   const [newUser, setNewUser] = useState({
@@ -55,6 +56,8 @@ const AuthRegister = () => {
         onChange={onChangeHandler}
         onSubmit={onSubmitHandler}
       />
+      <div className="footer-gap"></div>
+      <Footer />
     </div>
   );
 };

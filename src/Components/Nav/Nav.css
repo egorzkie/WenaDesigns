@@ -1,0 +1,19 @@
+.nav {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+li {
+display: inline-block;
+margin: 7px;
+}
+
+a {
+    text-decoration: none;
+    color: #a57454;
+}
+  
+a:hover {
+    text-decoration: underline;
+}

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from "react-router-dom";
 import Parse from "parse";
 import Header from '../Header/Header.js'
+import Footer from '../Footer/Footer.js'
 import {doUserLogOut} from '../Auth/AuthService';
 
 function ProfileGood() {
@@ -24,6 +25,8 @@ function ProfileGood() {
         <p>Edit your profile...{" "}</p>
         {/* Move cart to shopping cart page */}
         {check}
+        <div className="footer-gap"></div>
+        <Footer />
     </div>
     );
 }

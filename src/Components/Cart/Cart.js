@@ -1,7 +1,7 @@
 import './Cart.css'
 import Header from '../Header/Header.js'
+import Footer from '../Footer/Footer.js'
 import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate } from "react-router-dom";
 import Parse from "parse";
 
 function Cart() {
@@ -20,6 +20,8 @@ return (
         <Header />
     <p> put cart stuff here.. </p>
     {cart}
+    <div className="footer-gap"></div>
+    <Footer />
     </div>
 );
 }

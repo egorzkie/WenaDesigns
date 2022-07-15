@@ -1,0 +1,32 @@
+.shipping-title {
+    font-family: "Alata", sans-serif;
+    font-size: 200%;
+    letter-spacing: 1px;
+    color: #a57454;
+    text-align: center;
+    letter-spacing: 7px;
+    padding: 20px;
+    margin-top: 15px;
+  }
+
+.subtitle {
+    font-family: "Alata", sans-serif;
+    letter-spacing: 1px;
+    color: #3a4a39;
+    text-align: center;
+    padding: 15px;
+}
+
+/* TO DO: fix margins */
+.shipping-point {
+  color: #3a4a39;
+  padding: 10px;
+  margin-left: 420px;
+  margin-right: 420px;
+  line-height: 27px;
+  font-size: 110%;
+  list-style-type: disc;
+  list-style-position: inside;
+  display: list-item;                                     
+}
+  

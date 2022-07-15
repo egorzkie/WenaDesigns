@@ -5,7 +5,7 @@ import MainModule from './Main/Main';
 import ShopAll from './ShopAll/ShopAll';
 import AuthRegister from './Auth/AuthRegister';
 import AuthLogin from "./Login/AuthLogin";
-import More from './More/More';
+import Shipping from './Shipping/Shipping';
 import Profile from './Profile/ProfileHome';
 import Cart from './Cart/Cart';
 
@@ -19,7 +19,7 @@ function Components() {
         <Route path="/Cart" element={<Cart />} />
         <Route path="/AuthRegister" element={<AuthRegister />} />
         <Route path="/login" element={<AuthLogin />} />
-        <Route path="/More" element={<More />} />
+        <Route path="/Shipping" element={<Shipping />} />
         <Route path="/Profile" element={<Profile />} />
         {/* <Route path="/ProfileHome" element={<Profile />} /> */}
       </Routes>
