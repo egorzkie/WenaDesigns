@@ -31,4 +31,4 @@ Here we would have the update our website to 0.2.0.
  
 ### Changed
   
-- updated nav bar with user register and log in.
+- updated nav bar with user register and log in log out
