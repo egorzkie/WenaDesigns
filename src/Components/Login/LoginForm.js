@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import {userLogin} from '../Auth/AuthService';
+import {userLogin, changePassword as ChangePassword} from '../Auth/AuthService';
 import { Link, useNavigate } from 'react-router-dom';
 import './Login.css';
 
-function LoginForm() {
+function LoginForm({ changePassword }) {
   const [newUser, setNewUser] = useState({
     email: '',
     password: '',
@@ -48,14 +48,14 @@ function LoginForm() {
   const onSubmit = (e) => {
     e.preventDefault();
     console.log('submitted: ', e.target);
-    setFlag(true);
+    changePassword ? ChangePassword(newUser.password, navigate) : setFlag(true);
   };
 
   return (
     <div>
       <div className="form-canvas">
       <form onSubmit={onSubmit} autoComplete="off">
-        <div className="form-group">
+        {changePassword ? null : <div className="form-group">
           <label>email</label>
           <br />
           <input
@@ -68,10 +68,10 @@ function LoginForm() {
             placeholder="EMAIL"
             required
           />
-        </div>
+        </div>}
         {' '}
         <div className="form-group">
-          <label>password</label>
+          <label>{changePassword ? 'new ' : ''}password</label>
           <br />
           <input
             type="password"
@@ -79,24 +79,25 @@ function LoginForm() {
             id="password-input"
             value={newUser.password}
             onChange={onChange}
-            name="password"
-            placeholder="PASSWORD"
+            // name={(changePassword ? 'new ' : '') + "password"}
+            name={"password"}
+            placeholder={(changePassword ? 'NEW ' : '') + "PASSWORD"}
             min="0"
             required
           />
         </div>
         <div className="form-group">
           <button type="submit" className="btn btn-primary" onSubmit={onSubmit}>
-            LOGIN
+            {changePassword ? 'CONFIRM' : 'LOGIN'}
           </button>
         </div>
       </form>
-      <p className="register-message">Don't have an account?</p>
+      {changePassword ? null : <><p className="register-message">Don't have an account?</p>
       <button type="submit" className="btn btn-primary" onSubmit={onSubmit}>
       <Link to="/AuthRegister" className="register-button">
           REGISTER
       </Link>
-      </button>
+      </button></>}
       </div>
     </div>
   );

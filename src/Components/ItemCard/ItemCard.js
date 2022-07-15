@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import './ItemCard.css';
+import { parse as Parse} from '../Auth/AuthService';
 
 function ItemCard({ name, price }) {
   return (
@@ -8,6 +9,15 @@ function ItemCard({ name, price }) {
       <figcaption>{ name ?? 'Product image'}</figcaption>
 
       <span className="item_price">{price ?? 'N/A'}</span>
+      <button onClick={async() => {
+        const user = Parse.User.current()
+        const userEmail = user.getEmail()
+        const shoppingCart = new Parse.Object('shoppingCart')
+        shoppingCart.set('name', name)
+        shoppingCart.set('email', userEmail)
+        shoppingCart.set('price', price)
+        await shoppingCart.save()
+      }}>Add to cart</button>
     </div>
   );
 }

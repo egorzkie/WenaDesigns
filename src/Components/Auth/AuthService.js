@@ -48,14 +48,14 @@ export const doUserLogIn = async function ({ username, password, setPassword, se
     }
   };
 
-  export const doUserLogOut = async function ({navigate}) {
+  export const doUserLogOut = async function ({navigate, changePassword}) {
     try {
       await Parse.User.logOut();
       // To verify that current user is now empty, currentAsync can be used
       const currentUser = await Parse.User.current();
       if (currentUser === null) {
         alert('Success! No user is logged in anymore!');
-        navigate('/home');
+        navigate(changePassword ? '/login' : '/home');
       }
       // Update state variable holding current user
       // getCurrentUser();
@@ -91,5 +91,17 @@ export const doUserLogIn = async function ({ username, password, setPassword, se
         setCurrentUser(currentUser);
         return currentUser;
       };
+
+export const changePassword = async(password, navigate) => {
+  const currentUser = await Parse.User.current();
+  currentUser.setPassword(password)
+  const result = await currentUser.save()
+  alert(
+    `Success! User ${result.get(
+      'username'
+    )} has successfully reset the password!`
+  );
+  doUserLogOut({ navigate, changePassword: true })
+}
       
 export const parse = Parse
