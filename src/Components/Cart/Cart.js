@@ -3,6 +3,8 @@ import Header from '../Header/Header.js'
 import Footer from '../Footer/Footer.js'
 import React, { useEffect, useState } from 'react';
 import Parse from "parse";
+import { Link } from 'react-router-dom';
+import CheckoutForm from '../Checkout/CheckoutForm'
 
 function Cart() {
 
@@ -20,6 +22,11 @@ return (
         <Header />
     <p> put cart stuff here.. </p>
     {cart}
+    <button>
+      <Link to="/CheckoutForm" className="checkout-button">
+          CHECKOUT
+      </Link>
+      </button>
     <div className="footer-gap"></div>
     <Footer />
     </div>
@@ -33,5 +40,6 @@ const getCurrentUser = async() => {
     const results = await (new Parse.Query('User').findAll());
     return results.find(res => res.id === userid)
 }
+
 
 export default Cart;

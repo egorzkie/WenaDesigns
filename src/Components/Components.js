@@ -8,6 +8,7 @@ import AuthLogin from "./Login/AuthLogin";
 import Shipping from './Shipping/Shipping';
 import Profile from './Profile/ProfileHome';
 import Cart from './Cart/Cart';
+import CheckoutForm from './Checkout/CheckoutForm';
 
 function Components() {
   return (
@@ -21,6 +22,7 @@ function Components() {
         <Route path="/login" element={<AuthLogin />} />
         <Route path="/Shipping" element={<Shipping />} />
         <Route path="/Profile" element={<Profile />} />
+        <Route path="/CheckoutForm" element={<CheckoutForm />} />
         {/* <Route path="/ProfileHome" element={<Profile />} /> */}
       </Routes>
     </BrowserRouter>
