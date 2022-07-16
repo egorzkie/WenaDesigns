@@ -11,13 +11,11 @@ function MainModule() {
   return (
     <div>
         <Header />
-        <br/><br/>
-        <div>
+        <div className="shop-button">
         <Link to="/ShopAll">
         <button className="shopButton">SHOP</button>
         </Link>
         </div>
-        <br/><br/><br/><br/>
         <div className="featured">  
         <h2 className="text">CUSTOM BABY NURSERY SIGNS</h2>
         {/* TO DO: add links to dynamic web page */}
