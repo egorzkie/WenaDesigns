@@ -20,9 +20,7 @@
 /* TO DO: fix margins */
 .shipping-point {
   color: #3a4a39;
-  padding: 10px;
-  margin-left: 420px;
-  margin-right: 420px;
+  padding: 10px 27% 10px 27%;
   line-height: 27px;
   font-size: 110%;
   list-style-type: disc;

@@ -1,0 +1,10 @@
+.product-image {
+    height: 300px;
+}
+
+/* center?? */
+.card {
+    width: 300px;
+    float: left;
+    padding: 20px;
+}
