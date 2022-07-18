@@ -8,7 +8,7 @@ import Header from '../Header/Header.js'
 import Footer from '../Footer/Footer.js'
 
 // In a React Native application
-import ItemCard from '../ItemCard/ItemCard';
+import ProductPage from './ProductPage';
 import * as Env from './environments';
 
 /** @typedef  {{price:number,name:string} } Item  */
@@ -17,7 +17,7 @@ import * as Env from './environments';
 Parse.initialize(Env.APPLICATION_ID, Env.JAVASCRIPT_KEY);
 Parse.serverURL = Env.SERVER_URL;
 
-function ShopAll() {
+function Product() {
   const [items, setItems] = useState([]);
 
   /** @type {Item} */
@@ -31,7 +31,7 @@ function ShopAll() {
 
   /** @return {Promise<Item[]>} */
   const fetchItems = async () => {
-    const results = await (new Parse.Query('products').findAll());
+    const results = await (new Parse.Query('products').get('2no4UVNJC5'));
 
     return results.map(transformParseToObject);
   };
@@ -45,7 +45,7 @@ function ShopAll() {
     >
       <Header />
       { items.map(({ name, price, id, path }) => (
-        <ItemCard
+        <ProductPage
           key={id}
           {...{ name, price, id, path }}
         />
@@ -56,4 +56,4 @@ function ShopAll() {
   );
 }
 
-export default ShopAll;
+export default Product;

@@ -1,5 +1,5 @@
 import {
-  BrowserRouter, Navigate, Route, Routes
+  Switch, BrowserRouter as Router, Navigate, Route, Routes, Redirect
 } from 'react-router-dom';
 import MainModule from './Main/Main';
 import ShopAll from './ShopAll/ShopAll';
@@ -8,10 +8,13 @@ import AuthLogin from "./Login/AuthLogin";
 import Shipping from './Shipping/Shipping';
 import Profile from './Profile/ProfileHome';
 import Cart from './Cart/Cart';
+import Checkout from './Checkout/Checkout';
+import product from './Product/Product'
+import Product from './Product/Product'
 
 function Components() {
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
         <Route path="/home" element={<MainModule />} />
         <Route path="/ShopAll" element={<ShopAll />} />
@@ -21,9 +24,11 @@ function Components() {
         <Route path="/login" element={<AuthLogin />} />
         <Route path="/Shipping" element={<Shipping />} />
         <Route path="/Profile" element={<Profile />} />
-        {/* <Route path="/ProfileHome" element={<Profile />} /> */}
+        <Route path="/Checkout" element={<Checkout />} />
+        <Route path="/Product" element={<Product />} />
+        <Route path="{name}" component={product} />
       </Routes>
-    </BrowserRouter>
+    </Router>
 
   );
 }

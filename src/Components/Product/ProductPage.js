@@ -1,20 +1,15 @@
 import PropTypes from 'prop-types';
-import './ItemCard.css';
+import './Product.css';
 import { parse as Parse} from '../Auth/AuthService';
-import { Link } from 'react-router-dom';
 
-function ItemCard({ name, price, path }) {
+function ProductPage({ name, price, path }) {
   return (
-    // <div className="card [  flex-row ] [ bg-white p-4 shadow-sm h-200 w-10 ]">
-    <div className="card">
-      <div>
+    <div>
       {/* make dynamic */}
-      <Link to="/Product">
+      <p> Hi </p>
       <img className="product-image" src={path} alt="" />
       <figcaption>{ name ?? 'Product name'}</figcaption>
       <span className="item_price">${price ?? 'N/A'}</span>
-      </Link>
-      </div>
       <button onClick={async() => {
         const user = Parse.User.current()
         const userEmail = user.getEmail()
@@ -28,9 +23,9 @@ function ItemCard({ name, price, path }) {
   );
 }
 
-ItemCard.propTypes = {
+ProductPage.propTypes = {
   price: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
 };
 
-export default ItemCard;
+export default ProductPage;

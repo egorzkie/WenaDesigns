@@ -4,6 +4,7 @@ import Footer from '../Footer/Footer.js'
 import React, { useEffect, useState } from 'react';
 import Parse from "parse";
 import CartItem from './CartItem';
+import { Link } from 'react-router-dom';
 
 function Cart() {
 
@@ -33,14 +34,20 @@ function Cart() {
             setTotalPrice(totalPrice)
             setCart(cart)
         })
+
     })
 
 return (   
     <div>
-        <Header />
-    <p> put cart stuff here.. </p>
+    <Header />
+    {/* If cart is not empty */}
+    {totalPrice > 0 && <p>totalPrice:{totalPrice}</p>}
     {cart.map((item, index) => <CartItem key={index} data={item} />)}
-    <p>totalPrice:{totalPrice}</p>
+    {totalPrice > 0 && <Link to="/Checkout"><button>Checkout</button>
+    </Link>}
+    {/* If cart is empty */}
+    {totalPrice == 0 && <h2>Your cart is empty!</h2>}
+    {totalPrice == 0 && <Link to="/ShopAll"><button>Shop</button></Link>}
     <div className="footer-gap"></div>
     <Footer />
     </div>
