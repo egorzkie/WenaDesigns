@@ -2,6 +2,7 @@ import Parse from "parse";
 import Header from '../Header/Header.js'
 import Footer from '../Footer/Footer.js'
 import ProfileCheck from './ProfileCheck.js';
+import './Profile.css';
 
 function ProfileGood() {
   
@@ -18,7 +19,7 @@ function ProfileGood() {
     return (
         <div>
             <Header />
-        <p>Edit your profile...{" "}</p>
+        <p style={{ textAlign: 'center', margin: 20, borderBottom: '1px solid black', padding: 20 }}>Your Account{" "}</p>
         {/* Move cart to shopping cart page */}
         {currentUser ? <ProfileCheck /> : null}
         <div className="footer-gap"></div>

@@ -1,5 +1,5 @@
 import {
-  BrowserRouter as Router, Navigate, Route, Routes
+  BrowserRouter as Router, Navigate, Route, Routes, 
 } from 'react-router-dom';
 import MainModule from './Main/Main';
 import ShopAll from './ShopAll/ShopAll';
@@ -12,6 +12,7 @@ import Checkout from './Checkout/Checkout';
 // import product from './Product/Product'
 // import Product from './Product/Product'
 import Orders from './Order/Order'
+import Display from './Display/Display'
 
 function Components() {
   return (
@@ -27,6 +28,7 @@ function Components() {
         <Route path="/Profile" element={<Profile />} />
         <Route path="/Checkout" element={<Checkout />} />
         <Route path="/Orders" element={<Orders />} />
+        <Route path="/Display" element={<Display />} />
         {/* <Route path="/Product" element={<Product />} />
         <Route path="{name}" component={product} /> */}
       </Routes>
