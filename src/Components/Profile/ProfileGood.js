@@ -1,9 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate } from "react-router-dom";
 import Parse from "parse";
 import Header from '../Header/Header.js'
 import Footer from '../Footer/Footer.js'
-import {doUserLogOut} from '../Auth/AuthService';
 import ProfileCheck from './ProfileCheck.js';
 
 function ProfileGood() {

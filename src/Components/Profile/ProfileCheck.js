@@ -1,6 +1,6 @@
 import React,  { useState } from 'react'
 import {doUserLogOut} from '../Auth/AuthService';
-import { useParams, useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import LoginForm from '../Login/LoginForm';
 import '../Login/Login.css'
 
@@ -13,6 +13,11 @@ const ProfileCheck = () => {
         Log Out
     </button>
     {show ? <LoginForm changePassword={true} /> : null}
+    <button type="submit">
+      <Link to="/Orders" className="order-button">
+          See Orders
+      </Link>
+      </button>
 </>
 }
 

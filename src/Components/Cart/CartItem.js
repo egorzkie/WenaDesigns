@@ -1,5 +1,3 @@
-import React, { useEffect, useState } from 'react';
-
 const CartItem = ({ data }) => {
     const { price, name, origin } = data
     return <div>

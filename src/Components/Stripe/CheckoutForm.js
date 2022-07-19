@@ -1,10 +1,12 @@
 import React from "react";
+import { parse as Parse} from '../Auth/AuthService';
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import { useNavigate } from "react-router-dom";
 import Header from '../Header/Header.js'
 import Footer from '../Footer/Footer.js'
 
-export const CheckoutForm = () => {
+// where does it get this name from 
+export const CheckoutForm = ({ name, price }) => {
   const stripe = useStripe();
   const elements = useElements();
   let navigate = useNavigate();
@@ -17,14 +19,13 @@ export const CheckoutForm = () => {
     });
 
     if (!error) {
-        alert("Payment success!")
+        alert("Payment success! Thank you!");
         navigate('../');
       // needs to delete items in cart... items go to order component?
       //send token to backend here
     } else {
-      alert("Payment unsuccessful")
+      alert("Payment unsuccessful. Try again.");
     }
-  };
 
   return (
     <div>
@@ -37,4 +38,5 @@ export const CheckoutForm = () => {
     <Footer />
     </div>
   );
+  }
 };
