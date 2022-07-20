@@ -8,8 +8,8 @@ const ProfileCheck = () => {
     const [show, setShow] = useState(false)
     const navigate = useNavigate()
     return <>
-    <button onClick={() => setShow(true)}>Change Pass</button>
-    <button onClick={() => doUserLogOut({navigate})}>
+    <button type="submit" onClick={() => setShow(true)}>Change Pass</button>
+    <button type="submit" onClick={() => doUserLogOut({navigate})}>
         Log Out
     </button>
     {show ? <LoginForm changePassword={true} /> : null}

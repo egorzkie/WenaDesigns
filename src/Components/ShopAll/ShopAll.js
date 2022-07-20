@@ -50,7 +50,7 @@ function ShopAll() {
           {...{ name, price, id, path }}
         />
       )) }
-      <div className="footer-gap"></div>
+      <div className="footer-gap" key="footer"></div>
       <Footer />
     </div>
   );
