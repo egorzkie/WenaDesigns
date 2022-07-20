@@ -40,7 +40,6 @@ function Cart() {
 return (   
     <div>
     <Header />
-    {/* If cart is not empty */}
     {totalPrice > 0 && <p>totalPrice:{totalPrice}</p>}
     {cart.map((item, index) => <CartItem key={index} data={item} />)}
     {totalPrice > 0 && <Link to="/Checkout"><button>Checkout</button>
