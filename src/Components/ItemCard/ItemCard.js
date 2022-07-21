@@ -12,6 +12,9 @@ export const AddCart = ({ name, price }) => {
     shoppingCart.set('email', userEmail)
     shoppingCart.set('price', price)
     await shoppingCart.save()
+    alert(
+      `added to cart!!`,
+    );
   }}>Add to cart</button>
 }
 function ItemCard({ name, price, path }) {
