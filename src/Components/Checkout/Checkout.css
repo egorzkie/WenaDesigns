@@ -1,0 +1,30 @@
+.checkout {
+  padding: 40px;
+  border: 4px solid #f6e7de;
+  border-style: dotted;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+.space {
+    padding: 15px;
+}
+
+.payBtn {
+    color: white;
+    margin-top: 10px;
+    background-color: #e4b998;
+    padding: 5px;
+    border-radius: 3px;
+    width: 20%;
+    border: none;
+    font-family: "Lora", serif;
+    font-weight: bold;
+}
+
+.payBtn:hover {
+    cursor: pointer;
+    background-color: #c17f32;
+}

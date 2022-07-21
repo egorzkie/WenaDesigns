@@ -5,6 +5,31 @@
 /* center?? */
 .card {
     width: 300px;
-    float: left;
+    float: right;
     padding: 20px;
+}
+
+.name {
+    font-family: "Shadows Into Light", cursive;
+    font-size: 130%;
+}
+
+.price {
+    font-size: 155%;
+}
+
+.addToCartBtn {
+    color: white;
+    background-color: #e4b998;
+    padding: 5px;
+    border-radius: 3px;
+    width: 15%;
+    border: none;
+    font-family: "Lora", serif;
+    font-weight: bold;
+}
+
+.addToCartBtn:hover {
+    cursor: pointer;
+    background-color: #c17f32;
 }

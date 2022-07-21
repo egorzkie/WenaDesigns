@@ -19,7 +19,9 @@ function ProfileGood() {
     return (
         <div>
             <Header />
-        <p style={{ textAlign: 'center', margin: 20, borderBottom: '1px solid black', padding: 20 }}>Your Account{" "}</p>
+        <div className="account">
+        <h2 style={{ textAlign: 'center', margin: 20, borderBottom: '1px solid black', padding: 20 }}>Your Account{" "}</h2>
+        </div>
         {/* Move cart to shopping cart page */}
         {currentUser ? <ProfileCheck /> : null}
         <div className="footer-gap"></div>

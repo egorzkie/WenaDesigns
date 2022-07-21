@@ -4,7 +4,7 @@ import { parse as Parse} from '../Auth/AuthService';
 import { Link } from 'react-router-dom';
 
 export const AddCart = ({ name, price }) => {
-  return <button onClick={async() => {
+  return <button className="addToCartBtn" onClick={async() => {
     const user = Parse.User.current()
     const userEmail = user.getEmail()
     const shoppingCart = new Parse.Object('shoppingCart')
@@ -25,11 +25,15 @@ function ItemCard({ name, price, path }) {
       {/* make dynamic */}
         <Link to={`/Display?name=${name}`}>
           <img className="product-image" src={path} alt="" />
+          <div className="name">
           <figcaption>{ name ?? 'Product name'}</figcaption>
+          </div>
+          <div className="price">
           <span className="item_price">${price ?? 'N/A'}</span>
+          </div>
         </Link>
       </div>
-      <AddCart name={name} price={price} />
+      {/* <AddCart name={name} price={price} /> */}
     </div>
   );
 }

@@ -49,15 +49,17 @@ function Cart() {
 return (   
     <div>
     <Header />
+    <div className="shoppingCartTitle">
     <h2 style={{ textAlign: 'center', margin: 20, borderBottom: '1px solid black', padding: 20 }}>Shopping Cart</h2>
+    </div>
     {/* If cart is not empty */}
     {cart.map((item, index) => <CartItem key={index} data={item} />)}
-    {totalPrice > 0 && <p style={{ textAlign: 'right', marginRight: 20 }}>Total Price: {totalPrice}</p>}
-    {totalPrice > 0 && <Link to="/Checkout"><button>Checkout</button>
+    {totalPrice > 0 && <p style={{ textAlign: 'right', marginRight: 20 }}>Total Price: ${totalPrice}</p>}
+    {totalPrice > 0 && <Link to="/Checkout"><button className="cart-btn">Checkout</button>
     </Link>}
     {/* If cart is empty */}
-    {totalPrice === 0 && <h2>Your cart is empty!</h2>}
-    {totalPrice === 0 && <Link to="/ShopAll"><button>Shop</button></Link>}
+    {totalPrice === 0 && <h2 className="emptyCart">Your cart is empty!</h2>}
+    {totalPrice === 0 && <Link to="/ShopAll"><button className="cart-btn">Shop Now</button></Link>}
     <div className="footer-gap"></div>
     <Footer />
     </div>

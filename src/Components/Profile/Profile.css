@@ -2,3 +2,23 @@
 .profile-title{
     text-align: 'center';
 }
+
+.account {
+    font-family: "Alata", sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #3a4a39;
+}
+
+.PassBtn{
+    margin-top: 60px;
+    margin-bottom: 15px;   
+}
+
+.ProfileBtn {
+    margin: 0;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+}

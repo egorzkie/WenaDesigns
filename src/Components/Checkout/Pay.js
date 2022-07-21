@@ -1,8 +1,9 @@
   import PropTypes from 'prop-types';
-  import { parse as Parse} from '../Auth/AuthService';
+  // import { parse as Parse} from '../Auth/AuthService';
   import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
   import { useNavigate } from "react-router-dom";
   import axios from 'axios';
+  import './Checkout.css'
   
   function Pay({ name, price }) {
 
@@ -58,11 +59,14 @@
 
     return (
       <div>
+      <div className="space"></div>
+      <div className="checkout">
     <form onSubmit={handleSubmit} style={{ maxWidth: 400 }}>
       <CardElement />
-      <button>
+      <button className="payBtn">
       Pay</button>
     </form>
+    </div>
     </div>
     );
   }

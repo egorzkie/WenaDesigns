@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import { AddCart } from "../ItemCard/ItemCard";
 import Header from '../Header/Header.js'
 import Footer from '../Footer/Footer.js'
+import './Display.css'
 
 const Display = () => {
     const { search } = useLocation()
@@ -29,10 +30,10 @@ const Display = () => {
     }
     return <><Header/>
     <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around', marginTop: 40, marginBottom: 40}}>
-        <img key={0} src={keyObj.path} style={{ width: 500, height: 500 }} alt="product" />
+        <img className="displayImg" key={0} src={keyObj.path} style={{ width: 450, height: 450 }} alt="product" />
         <div>
             {keys.map((key, index) => {
-                return key === 'path' ? null : <div key={index}>{`${key}: ${keyObj[key]}`}</div>
+                return key === 'path' ? null : <div className="display" key={index}>{`${key}: ${keyObj[key]}`}</div>
             })}
             <div style={{ marginTop: 40 }}>
                 <AddCart {...keyObj} />

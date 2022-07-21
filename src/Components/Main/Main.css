@@ -47,9 +47,3 @@
 .text {
   padding: 20px;
 }
-
-/* TO DO: come back and fix */
-.sign:hover {
-  opacity: 0.5;
-  cursor: pointer;
-}
