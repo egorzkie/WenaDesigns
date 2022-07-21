@@ -9,8 +9,7 @@ import Shipping from './Shipping/Shipping';
 import Profile from './Profile/ProfileHome';
 import Cart from './Cart/Cart';
 import Checkout from './Checkout/Checkout';
-// import product from './Product/Product'
-// import Product from './Product/Product'
+import CheckoutForm from './Stripe/CheckoutForm';
 import Orders from './Order/Order'
 import Display from './Display/Display'
 
@@ -27,10 +26,9 @@ function Components() {
         <Route path="/Shipping" element={<Shipping />} />
         <Route path="/Profile" element={<Profile />} />
         <Route path="/Checkout" element={<Checkout />} />
+        <Route path="/CheckoutForm" element={<CheckoutForm />} />
         <Route path="/Orders" element={<Orders />} />
         <Route path="/Display" element={<Display />} />
-        {/* <Route path="/Product" element={<Product />} />
-        <Route path="{name}" component={product} /> */}
       </Routes>
     </Router>
 

@@ -39,6 +39,7 @@ const Display = () => {
             </div>
         </div>
     </div>
+    <div className="footer-gap"></div>
     <Footer/>
     </>
 }

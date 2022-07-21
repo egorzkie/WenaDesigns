@@ -2,7 +2,6 @@
   import { parse as Parse} from '../Auth/AuthService';
   import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
   import { useNavigate } from "react-router-dom";
-  import { Link } from 'react-router-dom';
   import axios from 'axios';
   
   function Pay({ name, price }) {
@@ -29,7 +28,7 @@
       });
   
       if (!error) {
-        console.log("Stripe 23 | token generated!", paymentMethod);
+        console.log("Stripe | token generated!", paymentMethod);
         try {
           const { id } = paymentMethod;
           const response = await axios.post(
@@ -40,14 +39,15 @@
             }
           );
   
-          console.log("Stripe 35 | data", response.data.success);
+          console.log("Stripe | data", response.data.success);
           if (response.data.success) {
-            console.log("CheckoutForm.js 25 | payment successful!");
+            console.log("payment successful!");
             alert("Payment successful! Thank you for ordering!");
             navigate('../');
+            // getOrder();
           }
         } catch (error) {
-          console.log("CheckoutForm.js 28 | ", error);
+          console.log(error.message);
           alert("Payment unsuccessful. Please try again.");
         }
       } else {
@@ -60,15 +60,8 @@
       <div>
     <form onSubmit={handleSubmit} style={{ maxWidth: 400 }}>
       <CardElement />
-      <button onClick={async() => {
-        const user = Parse.User.current()
-        const userEmail = user.getEmail()
-        const orders = new Parse.Object('orders')
-        orders.set('name', name)
-        orders.set('email', userEmail)
-        orders.set('price', price)
-        await orders.save()
-      }}>Pay</button>
+      <button>
+      Pay</button>
     </form>
     </div>
     );
