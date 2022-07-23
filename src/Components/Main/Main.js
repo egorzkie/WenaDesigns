@@ -1,5 +1,4 @@
-import './Main.css';
-import { Link } from 'react-router-dom';
+import './Main.scss';
 import Header from '../Header/Header.js'
 import Footer from '../Footer/Footer.js'
 import sign1 from './Images/sign1.jpg'
@@ -11,10 +10,14 @@ function MainModule() {
   return (
     <div>
         <Header />
-        <div className="shop-button">
-        <Link to="/ShopAll">
-        <button className="shopButton">SHOP</button>
-        </Link>
+
+        <div id="container">
+          {/* <Link to="/ShopAll"> */}
+          <div class="button" id="button-3">
+          <div id="circle"></div>
+          <a href="/ShopAll" className="Shop">SHOP</a>
+          </div>
+          {/* </Link> */}
         </div>
         <div className="featured">  
         <h2 className="text">CUSTOM BABY NURSERY SIGNS</h2>

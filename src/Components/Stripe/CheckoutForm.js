@@ -1,7 +1,7 @@
-import {
-  useEffect,
-  useState,
-} from 'react';
+// import {
+//   useEffect,
+//   useState,
+// } from 'react';
 import Pay from '../Checkout/Pay'
 import Header from '../Header/Header.js'
 import Parse from 'parse';

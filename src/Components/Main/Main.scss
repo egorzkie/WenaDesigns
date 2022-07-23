@@ -1,0 +1,92 @@
+  .shopButton:hover {
+    cursor: pointer;
+  }
+  
+  .sign {
+    height: 325px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 20px;
+  }
+  
+  .featured {
+    font-family: "Alata", sans-serif;
+    font-size: 200%;
+    letter-spacing: 10px;
+    text-align: right;
+    color: #f2e1cf;
+    background-color: #e6bb9c;
+    display: inline-flex;
+    align-items:center;
+    right: 0px;
+    left: 0px;
+    margin-top: 80px;
+  }
+  
+  .text {
+    padding: 20px;
+  }
+  
+  #container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px 0 50px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Button Style */
+  
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-family: "Alata", sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 125%;
+    border-radius: 25px;
+    background-color: hsl(24, 33%, 49%);
+    padding: 12px 48px;
+    border: none;
+  }
+  
+  .Shop {
+    color: white;
+    letter-spacing: 4px;
+  }
+  
+  #button-3 {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  #button-3 a {
+    position: relative;
+    transition: all .45s ease-Out;
+  }
+  
+  #circle {
+    width: 0%;
+    height: 0%;
+    opacity: 0;
+    line-height: 40px;
+    border-radius: 50%;
+    background: #e6bb9c;
+    position: absolute;
+    transition: all .5s ease-Out;
+    top: 20px;
+    left: 70px;
+  }
+  
+  #button-3:hover #circle {
+    width: 200%;
+    height: 500%;
+    opacity: 1;
+    top: -70px;
+    left: -70px;
+  }

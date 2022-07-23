@@ -29,13 +29,15 @@
       });
   
       if (!error) {
-        console.log("Stripe | token generated!", paymentMethod);
+        console.log("Token generated!", paymentMethod);
+        alert("Payment successful! Thank you for ordering!");
+        navigate('../');
         try {
           const { id } = paymentMethod;
           const response = await axios.post(
             "http://localhost:8080/stripe/charge",
             {
-              amount: 999,
+              amount: 100,
               id: id,
             }
           );
@@ -43,8 +45,6 @@
           console.log("Stripe | data", response.data.success);
           if (response.data.success) {
             console.log("payment successful!");
-            alert("Payment successful! Thank you for ordering!");
-            navigate('../');
             // getOrder();
           }
         } catch (error) {
