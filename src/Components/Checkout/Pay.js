@@ -28,6 +28,7 @@
         card: elements.getElement(CardElement),
       });
   
+      // payment is processed 
       if (!error) {
         console.log("Token generated!", paymentMethod);
         alert("Payment successful! Thank you for ordering!");
@@ -47,6 +48,7 @@
             console.log("payment successful!");
             // getOrder();
           }
+        // payment is not processed
         } catch (error) {
           console.log(error.message);
           alert("Payment unsuccessful. Please try again.");
